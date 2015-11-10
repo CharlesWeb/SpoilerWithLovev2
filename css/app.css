@@ -16,6 +16,12 @@
   border: 1px solid white;
 }
 
+.validation_ok{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
 .red{
   color: red;
 }
