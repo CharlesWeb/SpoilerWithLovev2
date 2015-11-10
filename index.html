@@ -7,6 +7,21 @@
 		<meta name="author" content="http://choco-pixel.com">
 		<title>Spoil With Love</title>
 
+		<!-- Open Graph -->
+		<meta property="og:locale" content="fr_FR" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Spoil With Love your friends!" />
+		<meta property="og:description" content="Spoil With Love your friends, time to spoil!" />
+		<meta property="og:url" content="http://spoilwithlove.fr" />
+		<meta property="og:site_name" content="SpoilWithLove" />
+		<meta property="og:image" content="http://spoilwithlove.fr/img/favicon/favicon.ico" />
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:description" content="Spoil With Love your friends."/>
+		<meta name="twitter:title" content="Spoil With Love"/>
+		<meta name="twitter:site" content="@spoilwithlove"/>
+		<meta name="twitter:domain" content="SpoilWithLove"/>
+		<meta name="twitter:image" content="http://spoilwithlove.fr/img/favicon/favicon.ico"/>
+
 		<!-- Stylesheets -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
@@ -62,7 +77,13 @@
 						<!-- Subscription form -->
 						<form class="form-inline signup" action="mail.php" method="POST" role="form">
 							<div class="form-group">
-								<input type="email" name="email" class="form-control" placeholder="Email address">
+								<select name="choixSerie">
+									<option value="got">Game Of Thrones</option>
+									<option value="twd">The Walking Dead</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="Adresse mail">
 							</div>
 							<div class="form-group">
 								<button type="submit" name="submit" class="btn btn-theme ladda-button" data-style="expand-left"><span class="ladda-label">Spoil Time!</span></button>
@@ -124,7 +145,7 @@
 									</div>
 									<div class="description">
 										<h4>Donne le mail de ton pote!</h4>
-										<p>C'est simple, tu as juste à l'écrire dans le champ "Adresse Mail". C'est facile, promis.
+										<p>Tu as juste à l'écrire dans le champ "Adresse Mail". Promis, c'est facile.
 										</p>
 									</div>
 								</div>

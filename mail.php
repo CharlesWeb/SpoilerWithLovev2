@@ -3,13 +3,11 @@ require_once 'vendor/autoload.php';
 
 if(isset($_POST['submit'])){
 
-  /*if($_POST['choixSerie'] == 'got'){
-    $body = file_get_contents('');
+  if($_POST['choixSerie'] == 'got'){
+    $body = "got";
   }elseif($_POST['choixSerie'] == 'twd'){
-    $body = file_get_contents('');
-  }else{
-    $body = file_get_contents('');
-  }*/
+    $body = "twd";
+  }
 
     $dest_mail = htmlspecialchars(trim($_POST['email']));
 
@@ -31,14 +29,13 @@ if(isset($_POST['submit'])){
     $mail->IsHTML(true);                                  // Set email format to HTML
 
     $mail->Subject = 'Petit spoil d\'un ami';
-    $mail->Body    = 'test';
+    $mail->Body    = $body;
     $mail->AltBody = 'Tu viens de recevoir un spoil d\'un pote!  Malheuresement ta boite mail ne peut pas lire le message! Va faire un tour sur http://spoilwithlove.fr !';
 
     if(!$mail->Send()) {
      header('Location: error.html');
      exit;
     }
-
     header('Location: success.html');
 
   }
