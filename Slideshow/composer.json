@@ -1,0 +1,14 @@
+{
+    "name": "root/spoilwithlove",
+    "description": "Buzzie Awards",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Charles",
+            "email": "charles.barbier.web@gmail.com"
+        }
+    ],
+    "require": {
+      "phpmailer/phpmailer": "~5.2"
+    }
+}
