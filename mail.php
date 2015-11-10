@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 
     $mail->Subject = 'Petit spoil d\'un ami';
     $mail->Body    = 'test';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->AltBody = 'Tu viens de recevoir un spoil d\'un pote!  Malheuresement ta boite mail ne peut pas lire le message! Va faire un tour sur http://spoilwithlove.fr !';
 
     if(!$mail->Send()) {
      header('Location: error.html');
