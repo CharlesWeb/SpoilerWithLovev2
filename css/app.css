@@ -7,6 +7,14 @@
   display:block !important;
 }
 
+#select{
+  background: transparent;
+  height: 42px;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid white;
+}
 
 .red{
   color: red;

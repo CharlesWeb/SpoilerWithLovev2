@@ -4,9 +4,23 @@ require_once 'vendor/autoload.php';
 if(isset($_POST['submit'])){
 
   if($_POST['choixSerie'] == 'got'){
-    $body = "got";
+    $body = file_get_contents('Archive/email_got.html');
   }elseif($_POST['choixSerie'] == 'twd'){
-    $body = "twd";
+    $body = file_get_contents('Archive/email_twd.html');
+  }elseif($_POST['choixSerie'] == 'bb'){
+    $body = file_get_contents('Archive/email_bb.html');
+  }elseif($_POST['choixSerie'] == 'dxt'){
+    $body = file_get_contents('Archive/email_dxt.html');
+  }elseif($_POST['choixSerie'] == 'dn'){
+    $body = file_get_contents('Archive/email_dn.html');
+  }elseif($_POST['choixSerie'] == 'ment'){
+    $body = file_get_contents('Archive/email_ment.html');
+  }elseif($_POST['choixSerie'] == 'mr'){
+    $body = file_get_contents('Archive/email_mr.html');
+  }elseif($_POST['choixSerie'] == 'pll'){
+    $body = file_get_contents('Archive/email_pll.html');
+  }else{
+    $body = file_get_contents('Archive/email_sons.html');
   }
 
     $dest_mail = htmlspecialchars(trim($_POST['email']));
@@ -22,7 +36,7 @@ if(isset($_POST['submit'])){
     $mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
 
     $mail->From = 'nospoilwithlove@gmail.com';
-    $mail->FromName = 'Your From name';
+    $mail->FromName = '(Spoil) With Love';
     $mail->AddAddress($dest_mail);  // Add a recipient
                    // Name is optional
 
