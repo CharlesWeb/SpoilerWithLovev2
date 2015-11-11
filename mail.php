@@ -4,7 +4,7 @@ require_once 'vendor/autoload.php';
 if(isset($_POST['submit'])){
 
   if($_POST['choixSerie'] == 'got'){
-    $body = 'test';
+    $body = file_get_contents('Archive/email_got.html');
   }elseif($_POST['choixSerie'] == 'twd'){
     $body = file_get_contents('Archive/email_twd.html');
   }elseif($_POST['choixSerie'] == 'bb'){
@@ -27,17 +27,29 @@ if(isset($_POST['submit'])){
 
     $mail = new PHPMailer;
 
+    $mail->Host = 'smtp.mandrillapp.com';                 // Specify main and backup server
+      $mail->Port = 587;                                    // Set the SMTP port
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'b.darcet@gmail.com';                // SMTP username
+$mail->Password = '5-t44g8fJHfb2BEZxqQURw';                  // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
+
+//$mail->From = 'from@example.com';
+//$mail->FromName = 'Your From name';
+//$mail->AddAddress('josh@example.net', 'Josh Adams');  // Add a recipient
+//$mail->AddAddress('ellen@example.com');               // Name is optional
+
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'ssl0.ovh.net';                 // Specify main and backup server
-    $mail->Port = 465;                                    // Set the SMTP port
-    $mail->SMTPAuth = true;                              // Enable SMTP authentication
-    $mail->Username = 'spoilwithlove@spoilwithlove.fr';                // SMTP username
-    $mail->Password = 'jorchaben';                  // SMTP password
-    $mail->SMTPSecure = 'ssl';
+    //$mail->Host = 'ssl0.ovh.net';                 // Specify main and backup server
+    //$mail->Port = 465;                                    // Set the SMTP port
+    //$mail->SMTPAuth = true;                              // Enable SMTP authentication
+    //$mail->Username = 'spoilwithlove@spoilwithlove.fr';                // SMTP username
+    //$mail->Password = 'jorchaben';                  // SMTP password
+    //$mail->SMTPSecure = 'ssl';
                              // Enable encryption, 'ssl' also accepted
 
     $mail->From = 'spoilwithlove@spoilwithlove.fr';
-    $mail->FromName = 'Test';
+    $mail->FromName = 'Petit Spoil';
     $mail->AddAddress($dest_mail);  // Add a recipient
                    // Name is optional
 
