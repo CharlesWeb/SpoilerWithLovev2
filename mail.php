@@ -28,10 +28,10 @@ if(isset($_POST['submit'])){
     $mail = new PHPMailer;
 
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';                 // Specify main and backup server
+    $mail->Host = 'smtp.spoilwithlove.fr';                 // Specify main and backup server
     $mail->Port = 465;                                    // Set the SMTP port
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'nospoilwithlove@gmail.com';                // SMTP username
+    $mail->SMTPAuth = true;                              // Enable SMTP authentication
+    $mail->Username = 'spoilwithlove@spoilwithlove.fr';                // SMTP username
     $mail->Password = 'jorbencha';                  // SMTP password
     $mail->SMTPSecure = 'ssl';
                              // Enable encryption, 'ssl' also accepted
