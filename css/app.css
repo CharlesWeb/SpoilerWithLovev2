@@ -16,6 +16,10 @@
   border: 1px solid white;
 }
 
+#select option{
+  color: black;
+}
+
 .validation_ok{
   margin-top: 50px;
   margin-bottom: 50px;
