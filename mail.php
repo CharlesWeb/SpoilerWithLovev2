@@ -4,7 +4,7 @@ require_once 'vendor/autoload.php';
 if(isset($_POST['submit'])){
 
   if($_POST['choixSerie'] == 'got'){
-    $body = file_get_contents('Archive/email_got.html');
+    $body = 'test';
   }elseif($_POST['choixSerie'] == 'twd'){
     $body = file_get_contents('Archive/email_twd.html');
   }elseif($_POST['choixSerie'] == 'bb'){
@@ -28,16 +28,16 @@ if(isset($_POST['submit'])){
     $mail = new PHPMailer;
 
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.spoilwithlove.fr';                 // Specify main and backup server
+    $mail->Host = 'ssl0.ovh.net';                 // Specify main and backup server
     $mail->Port = 465;                                    // Set the SMTP port
     $mail->SMTPAuth = true;                              // Enable SMTP authentication
     $mail->Username = 'spoilwithlove@spoilwithlove.fr';                // SMTP username
-    $mail->Password = 'jorbencha';                  // SMTP password
+    $mail->Password = 'jorchaben';                  // SMTP password
     $mail->SMTPSecure = 'ssl';
                              // Enable encryption, 'ssl' also accepted
 
-    $mail->From = 'nospoilwithlove@gmail.com';
-    $mail->FromName = '(Spoil) With Love';
+    $mail->From = 'spoilwithlove@spoilwithlove.fr';
+    $mail->FromName = 'Test';
     $mail->AddAddress($dest_mail);  // Add a recipient
                    // Name is optional
 
